@@ -117,12 +117,15 @@ export default function Booking() {
       {/* Page Header */}
       <section className="pt-16 pb-10 md:pt-20 md:pb-12 bg-white border-b border-border">
         <div className="container max-w-7xl mx-auto px-4 md:px-6 text-center">
-          <h1 className="font-playfair text-5xl md:text-6xl font-bold text-foreground mb-4">
-            Book a Project
+          <h1 className="font-playfair text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight max-w-4xl mx-auto">
+            Have Something You've Been Wanting to Build?
           </h1>
-          <p className="text-lg text-primary font-medium max-w-2xl mx-auto">
-            Tell us about your goals, specifications, and timeline. Let's outline the ideal path to build it together.
+          <p className="text-lg text-secondary max-w-2xl mx-auto mb-6 leading-relaxed">
+            Whether it's a product, a brand, or a story, every great outcome begins with a simple conversation. We'd love to hear yours.
           </p>
+          <span className="inline-block text-xs font-bold uppercase tracking-widest text-primary bg-primary/5 px-4 py-1.5 rounded-full border border-primary/10">
+            Let's Connect
+          </span>
         </div>
       </section>
 
