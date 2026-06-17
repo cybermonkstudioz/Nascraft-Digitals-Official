@@ -225,37 +225,69 @@ export default function Academy() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 pt-4">
-            <div className="p-6 bg-white/[0.02] border border-white/5 rounded-xl text-center space-y-3">
-              <div className="w-12 h-12 rounded-full bg-primary/10 border border-primary/20 flex items-center justify-center text-primary mx-auto">
-                <GraduationCap className="w-6 h-6" />
-              </div>
-              <h4 className="font-bold text-lg">Skill India Standards</h4>
-              <p className="text-white/60 text-sm leading-relaxed">
-                Training structures and certification metrics aligned directly with the National Skill Development Corporation guidelines.
-              </p>
-            </div>
-
-            <div className="p-6 bg-white/[0.02] border border-white/5 rounded-xl text-center space-y-3">
-              <div className="w-12 h-12 rounded-full bg-primary/10 border border-primary/20 flex items-center justify-center text-primary mx-auto">
-                <Award className="w-6 h-6" />
-              </div>
-              <h4 className="font-bold text-lg">Govt. MSME Validation</h4>
-              <p className="text-white/60 text-sm leading-relaxed">
-                As a registered MSME entity, our organizational operations and certificates carry formal government registration credit.
-              </p>
-            </div>
-
-            <div className="p-6 bg-white/[0.02] border border-white/5 rounded-xl text-center space-y-3">
-              <div className="w-12 h-12 rounded-full bg-primary/10 border border-primary/20 flex items-center justify-center text-primary mx-auto">
-                <Sparkles className="w-6 h-6" />
-              </div>
-              <h4 className="font-bold text-lg">Agency Endorsed</h4>
-              <p className="text-white/60 text-sm leading-relaxed">
-                Build a portfolio with actual client projects, proving you have both knowledge and deployment capability.
-              </p>
-            </div>
-          </div>
+          <motion.div 
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-50px" }}
+            variants={{
+              hidden: {},
+              visible: {
+                transition: {
+                  staggerChildren: 0.15
+                }
+              }
+            }}
+            className="grid grid-cols-1 sm:grid-cols-3 gap-8 pt-4"
+          >
+            {[
+              {
+                icon: GraduationCap,
+                title: "Aligned With National Skill Initiatives",
+                desc: "Our training approach follows industry-focused learning principles that support skill development and career readiness.",
+              },
+              {
+                icon: Award,
+                title: "MSME Registered Organization",
+                desc: "As a registered MSME, we operate with a commitment to professionalism, credibility, and continuous skill development.",
+              },
+              {
+                icon: Sparkles,
+                title: "Portfolio-Driven Learning",
+                desc: "Gain hands-on experience through practical assignments and real-world projects that strengthen your portfolio and showcase your capabilities.",
+              },
+            ].map((card, idx) => {
+              const IconComponent = card.icon;
+              return (
+                <motion.div
+                  key={idx}
+                  variants={{
+                    hidden: { opacity: 0, y: 30 },
+                    visible: { 
+                      opacity: 1, 
+                      y: 0,
+                      transition: { type: "spring", stiffness: 80, damping: 15 }
+                    }
+                  }}
+                  whileHover={{ 
+                    y: -10,
+                    scale: 1.025,
+                    boxShadow: "0 20px 40px -15px rgba(196,30,58,0.25)",
+                    borderColor: "rgba(196,30,58,0.4)",
+                    backgroundColor: "rgba(255, 255, 255, 0.04)"
+                  }}
+                  className="p-8 bg-white/[0.02] border border-white/5 rounded-2xl text-center space-y-4 transition-colors duration-300 cursor-pointer"
+                >
+                  <div className="w-14 h-14 rounded-full bg-primary/10 border border-primary/20 flex items-center justify-center text-primary mx-auto transition-transform duration-300">
+                    <IconComponent className="w-6 h-6" />
+                  </div>
+                  <h4 className="font-bold text-lg text-white font-playfair">{card.title}</h4>
+                  <p className="text-white/60 text-sm leading-relaxed">
+                    {card.desc}
+                  </p>
+                </motion.div>
+              );
+            })}
+          </motion.div>
         </div>
       </section>
 
