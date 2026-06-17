@@ -143,7 +143,8 @@ export default function About() {
                 name: "Srihariharan Ganesh Kumar",
                 role: "Founder & Creative Lead",
                 image: "/srihariharan.jpg",
-                objectPosition: "center 30%",
+                objectPosition: "center 28%",
+                zoom: 1.35,
                 bio: "Believes that every brand has a story worth telling. By blending creativity, strategy, and design, he transforms ideas into meaningful digital experiences that inspire trust, spark engagement, and leave a lasting impression on audiences.",
               },
               {
