@@ -23,8 +23,8 @@ async function optimizeImages() {
       continue;
     }
 
-    // Skip favicon.png to maintain standard browser support
-    if (file === "favicon.png") {
+    // Skip favicon.png and og-image.png to maintain standard browser/platform support
+    if (file === "favicon.png" || file === "og-image.png") {
       console.log(`Skipping: ${file}`);
       continue;
     }

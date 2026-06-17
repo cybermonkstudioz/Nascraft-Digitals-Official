@@ -5,7 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { Mail, Phone, Clock, ArrowRight } from "lucide-react";
+import { Mail, Phone, Clock, ArrowRight, MapPin } from "lucide-react";
 import { toast } from "sonner";
 import { motion } from "framer-motion";
 
@@ -177,6 +177,40 @@ export default function Contact() {
                   </ul>
                 </div>
               </div>
+
+              {/* Google Business Profile QR Card */}
+              <motion.a 
+                href="https://www.google.com/search?q=Nascraft+Digitals"
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ y: -4 }}
+                className="group block p-6 rounded-xl bg-card border border-border/80 hover:border-primary/40 hover:shadow-[0_12px_30px_-12px_rgba(196,30,58,0.18)] transition-all duration-300"
+              >
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white group-hover:scale-105 transition-all duration-300 flex-shrink-0">
+                    <MapPin className="w-6 h-6" />
+                  </div>
+                  <div className="space-y-3 flex-1">
+                    <div>
+                      <h4 className="font-bold text-foreground group-hover:text-primary transition-colors text-sm uppercase tracking-wider">Google Profile</h4>
+                      <p className="text-secondary text-xs font-medium mt-1">Visit us on Google to see reviews, location details, and updates.</p>
+                    </div>
+                    
+                    <div className="flex justify-center bg-white p-3 rounded-lg border border-border/50 max-w-[160px] mx-auto group-hover:border-primary/20 transition-colors">
+                      <img 
+                        src="/google-business-qr.webp" 
+                        alt="Nascraft Digitals Google Business QR Code" 
+                        className="w-32 h-32 object-contain"
+                        loading="lazy"
+                      />
+                    </div>
+                    
+                    <span className="inline-flex items-center text-xs text-primary font-bold group-hover:gap-1.5 transition-all w-full justify-center pt-1">
+                      Scan QR or Click to Visit <ArrowRight className="w-3 h-3 ml-1" />
+                    </span>
+                  </div>
+                </div>
+              </motion.a>
             </motion.div>
 
             {/* Contact Form Card */}

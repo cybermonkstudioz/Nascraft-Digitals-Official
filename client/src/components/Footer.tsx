@@ -42,6 +42,26 @@ export default function Footer() {
                 <span className="text-[9px] text-white/50 leading-none">Government of India</span>
               </div>
             </div>
+
+            {/* Google Business QR Badge */}
+            <a 
+              href="https://www.google.com/search?q=Nascraft+Digitals" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="flex items-center gap-3 bg-white/5 border border-white/10 rounded-lg p-3 max-w-[240px] transition-all duration-300 hover:bg-white/10 hover:border-white/20 mt-4 block"
+            >
+              <img
+                src="/google-business-qr.webp"
+                alt="Nascraft Digitals Google Business Profile"
+                className="h-12 w-12 rounded bg-white p-0.5 flex-shrink-0 object-contain"
+                loading="lazy"
+              />
+              <div className="flex flex-col">
+                <span className="text-[10px] text-primary font-bold uppercase tracking-wider">Review Us</span>
+                <span className="text-xs font-bold text-white leading-tight">Google Profile</span>
+                <span className="text-[9px] text-white/50 leading-none">Scan or click to visit</span>
+              </div>
+            </a>
           </div>
 
           {/* Services */}
