@@ -81,30 +81,30 @@ export default function About() {
             <div className="group bg-card rounded-xl p-8 border border-border hover:border-primary/40 hover:shadow-[0_12px_40px_-12px_rgba(196,30,58,0.22)] hover:-translate-y-2 transition-all duration-300 cursor-pointer">
               <Target className="w-12 h-12 text-primary mb-4 group-hover:scale-110 transition-transform duration-300" />
               <h3 className="font-playfair text-2xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors duration-300">
-                Precision
+                Craftsmanship
               </h3>
               <p className="text-secondary leading-relaxed">
-                We obsess over every detail. From code to design, we ensure excellence at every level. Your project deserves nothing less than perfection.
+                Great work isn't accidental. We approach every project with care, attention to detail, and a commitment to quality that stands the test of time.
               </p>
             </div>
 
             <div className="group bg-card rounded-xl p-8 border border-border hover:border-primary/40 hover:shadow-[0_12px_40px_-12px_rgba(196,30,58,0.22)] hover:-translate-y-2 transition-all duration-300 cursor-pointer">
               <Zap className="w-12 h-12 text-primary mb-4 group-hover:scale-110 transition-transform duration-300" />
               <h3 className="font-playfair text-2xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors duration-300">
-                Innovation
+                Growth
               </h3>
               <p className="text-secondary leading-relaxed">
-                We stay ahead of the curve, embracing new technologies and creative approaches to solve problems in fresh, impactful ways.
+                We believe learning never stops. By embracing new ideas, technologies, and perspectives, we continue to create solutions that move businesses forward.
               </p>
             </div>
 
             <div className="group bg-card rounded-xl p-8 border border-border hover:border-primary/40 hover:shadow-[0_12px_40px_-12px_rgba(196,30,58,0.22)] hover:-translate-y-2 transition-all duration-300 cursor-pointer">
               <Users className="w-12 h-12 text-primary mb-4 group-hover:scale-110 transition-transform duration-300" />
               <h3 className="font-playfair text-2xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors duration-300">
-                Collaboration
+                Partnership
               </h3>
               <p className="text-secondary leading-relaxed">
-                Your success is our success. We work closely with you throughout the journey, ensuring your vision is realized exactly as imagined.
+                Success is built together. We value trust, transparency, and collaboration, ensuring every client feels heard, supported, and involved throughout the journey.
               </p>
             </div>
           </div>
