@@ -13,7 +13,14 @@ import { motion } from "framer-motion";
  * Design: High-end hero, program cards, certification trust section, and an interactive launch email subscription form.
  */
 
+import { useSEO } from "@/hooks/useSEO";
+
 export default function Academy() {
+  useSEO(
+    "Nascraft Digitals | Learn Software & Media Creation",
+    "Gain practical skills in coding, design, and media production through portfolio-driven learning and industry-aligned training programs."
+  );
+
   const [email, setEmail] = useState("");
   const [subscribed, setSubscribed] = useState(false);
 

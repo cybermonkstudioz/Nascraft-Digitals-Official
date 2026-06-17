@@ -15,7 +15,14 @@ import { motion } from "framer-motion";
  * Design: Two-column grid, glassmorphic contact cards, input animations, and project type selection tags.
  */
 
+import { useSEO } from "@/hooks/useSEO";
+
 export default function Contact() {
+  useSEO(
+    "Nascraft Digitals | Contact Our Team",
+    "Get in touch with Nascraft Digitals to request a quote, partner with us, or discuss your software development and media project goals."
+  );
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",

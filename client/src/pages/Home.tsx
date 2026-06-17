@@ -19,8 +19,15 @@ import {
   MessageSquare
 } from "lucide-react";
 import { motion } from "framer-motion";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { useSEO } from "@/hooks/useSEO";
 
 export default function Home() {
+  useSEO(
+    "Nascraft Digitals | Software & Digital Media Agency",
+    "Nascraft Digitals builds bespoke software, websites, and cinematic media for brands that demand precision engineering and creative excellence."
+  );
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -51,14 +58,7 @@ export default function Home() {
       <section className="relative py-20 md:py-32 overflow-hidden">
         {/* Background Watermark Dragon Logo */}
         <div
-          className="absolute inset-0 z-0 select-none pointer-events-none animate-[dragon-float_6s_ease-in-out_infinite]"
-          style={{
-            backgroundImage: "url('/dragon-logo.png')",
-            backgroundSize: "contain",
-            backgroundRepeat: "no-repeat",
-            backgroundPosition: "center",
-            opacity: 0.1,
-          }}
+          className="absolute inset-0 z-0 select-none pointer-events-none animate-[dragon-float_6s_ease-in-out_infinite] bg-[url('/dragon-logo.webp')] bg-contain bg-no-repeat bg-center opacity-10"
         ></div>
         <style>{`
           @keyframes dragon-float {
@@ -262,9 +262,10 @@ export default function Home() {
             <div className="hover-card group bg-card rounded-xl overflow-hidden shadow-md hover:shadow-[0_10px_40px_-12px_rgba(196,30,58,0.2)] hover:-translate-y-2 transition-all duration-300 border border-border hover:border-primary/40 cursor-pointer flex flex-col h-full">
               <div className="h-48 overflow-hidden relative">
                 <img
-                  src="/software-engineering.png"
+                  src="/software-engineering.webp"
                   alt="Software Engineering"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  loading="lazy"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950/20 to-transparent"></div>
               </div>
@@ -290,9 +291,10 @@ export default function Home() {
             <div className="hover-card group bg-card rounded-xl overflow-hidden shadow-md hover:shadow-[0_10px_40px_-12px_rgba(196,30,58,0.2)] hover:-translate-y-2 transition-all duration-300 border border-border hover:border-primary/40 cursor-pointer flex flex-col h-full">
               <div className="h-48 overflow-hidden relative">
                 <img
-                  src="/digital-design.png"
+                  src="/digital-design.webp"
                   alt="Digital Design & Media"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  loading="lazy"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950/20 to-transparent"></div>
               </div>
@@ -318,9 +320,10 @@ export default function Home() {
             <div className="hover-card group bg-card rounded-xl overflow-hidden shadow-md hover:shadow-[0_10px_40px_-12px_rgba(196,30,58,0.2)] hover:-translate-y-2 transition-all duration-300 border border-border hover:border-primary/40 cursor-pointer flex flex-col h-full">
               <div className="h-48 overflow-hidden relative">
                 <img
-                  src="/production-shoots.png"
+                  src="/production-shoots.webp"
                   alt="Production Shoots"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  loading="lazy"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950/20 to-transparent"></div>
               </div>
@@ -376,9 +379,10 @@ export default function Home() {
               <div className="h-80 overflow-hidden relative">
                 <div className="absolute inset-0 bg-slate-950/40 group-hover:bg-slate-950/20 transition-colors duration-300 z-10"></div>
                 <img
-                  src="/nutriintern.png"
+                  src="/nutriintern.webp"
                   alt="NutriIntern"
                   className="w-full h-full object-cover group-hover:scale-103 transition-transform duration-500"
+                  loading="lazy"
                 />
                 <span className="absolute top-4 left-4 bg-primary text-white text-[10px] uppercase font-bold tracking-widest px-3 py-1 rounded-full z-20 shadow-md">
                   Software System
@@ -403,9 +407,10 @@ export default function Home() {
               <div className="h-80 overflow-hidden relative">
                 <div className="absolute inset-0 bg-slate-950/40 group-hover:bg-slate-950/20 transition-colors duration-300 z-10"></div>
                 <img
-                  src="/varahiastro.png"
+                  src="/varahiastro.webp"
                   alt="VarahiAstro Trip Planner"
                   className="w-full h-full object-cover group-hover:scale-103 transition-transform duration-500"
+                  loading="lazy"
                 />
                 <span className="absolute top-4 left-4 bg-primary text-white text-[10px] uppercase font-bold tracking-widest px-3 py-1 rounded-full z-20 shadow-md">
                   Web App
@@ -486,6 +491,68 @@ export default function Home() {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-20 md:py-28 bg-white border-t border-border">
+        <div className="container max-w-4xl mx-auto px-4 md:px-6">
+          <div className="text-center mb-16 space-y-4">
+            <span className="text-primary font-bold text-xs uppercase tracking-widest">Questions</span>
+            <h2 className="font-playfair text-4xl md:text-5xl font-bold text-foreground">
+              Frequently Asked Questions
+            </h2>
+            <p className="text-lg text-secondary max-w-2xl mx-auto">
+              Find answers to common questions about our engagement process, technologies, and creative workflows.
+            </p>
+          </div>
+
+          <Accordion type="single" collapsible className="w-full space-y-4">
+            <AccordionItem value="item-1" className="border border-border rounded-xl px-6 bg-slate-50/50">
+              <AccordionTrigger className="text-base font-bold text-foreground hover:text-primary transition-colors py-5 hover:no-underline">
+                What core services does Nascraft Digitals offer?
+              </AccordionTrigger>
+              <AccordionContent className="text-secondary text-sm leading-relaxed pb-5 pt-1">
+                Nascraft Digitals operates as a multidisciplinary agency providing three core solutions: Custom Software Development (high-performance web/mobile apps, custom learning platforms, APIs, database engineering), Digital Media (cinematic video post-production, motion graphics, branding design, content retouching), and Production Shoots (product photography, event media coverage, and brand storytelling videos).
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="item-2" className="border border-border rounded-xl px-6 bg-slate-50/50">
+              <AccordionTrigger className="text-base font-bold text-foreground hover:text-primary transition-colors py-5 hover:no-underline">
+                How does your custom software engineering process differ from templates?
+              </AccordionTrigger>
+              <AccordionContent className="text-secondary text-sm leading-relaxed pb-5 pt-1">
+                We believe template-based systems generate excessive code bloat, run slowly, and compromise search engine authority. Instead, we engineer custom system architectures using modern, clean stacks like React, TypeScript, Tailwind CSS, Node.js, and MongoDB. Every module is built to perform with near-zero latency, clean semantic grids, and robust security, making sure your platform is ready to scale to millions of hits.
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="item-3" className="border border-border rounded-xl px-6 bg-slate-50/50">
+              <AccordionTrigger className="text-base font-bold text-foreground hover:text-primary transition-colors py-5 hover:no-underline">
+                Do you provide services for remote or international clients?
+              </AccordionTrigger>
+              <AccordionContent className="text-secondary text-sm leading-relaxed pb-5 pt-1">
+                Yes, our engineering and media consulting workflow is built to operate globally. We have served clients across various time zones, utilizing collaborative tools (like Slack, GitHub, and Figma) to provide absolute project transparency. Consultations, check-ins, and milestone updates are conducted via video conferencing to keep stakeholders fully aligned throughout the project timeline.
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="item-4" className="border border-border rounded-xl px-6 bg-slate-50/50">
+              <AccordionTrigger className="text-base font-bold text-foreground hover:text-primary transition-colors py-5 hover:no-underline">
+                What is the typical timeline and billing structure for a project?
+              </AccordionTrigger>
+              <AccordionContent className="text-secondary text-sm leading-relaxed pb-5 pt-1">
+                Project timelines and rates depend on the scope and complexity. Small-to-medium web projects typically range from 4 to 8 weeks, while enterprise software platforms require longer engagement. We offer milestone-based billing, aligning payments with specific deliverables like architecture planning, initial prototypes, frontend assembly, and final deployment. For creative shoots or monthly content editing, we work on project-based or monthly retainer agreements.
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="item-5" className="border border-border rounded-xl px-6 bg-slate-50/50">
+              <AccordionTrigger className="text-base font-bold text-foreground hover:text-primary transition-colors py-5 hover:no-underline">
+                How can we get started and book a consultation?
+              </AccordionTrigger>
+              <AccordionContent className="text-secondary text-sm leading-relaxed pb-5 pt-1">
+                Getting started is simple. You can visit our Booking page to select your project category (software, media, or consulting) and specify your goals, timelines, and budgets. Alternatively, reach out directly via email at contatcnas@gmail.com or call our team at +91 63696 18775. We typically reply within 24 business hours to schedule an initial discovery call.
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
         </div>
       </section>
 

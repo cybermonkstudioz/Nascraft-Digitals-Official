@@ -3,7 +3,14 @@ import { Card, CardContent } from "@/components/ui/card";
 import { AlertCircle, Home } from "lucide-react";
 import { useLocation } from "wouter";
 
+import { useSEO } from "@/hooks/useSEO";
+
 export default function NotFound() {
+  useSEO(
+    "Nascraft Digitals | Page Not Found",
+    "The page you are looking for does not exist."
+  );
+
   const [, setLocation] = useLocation();
 
   const handleGoHome = () => {

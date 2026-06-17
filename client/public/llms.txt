@@ -1,0 +1,42 @@
+# Nascraft Digitals
+
+Nascraft Digitals is a premium digital agency specializing in custom software engineering, high-performance web applications, aesthetic user interfaces, and cinematic media production.
+
+## Contact Information
+- **Email:** contatcnas@gmail.com
+- **Phone:** +91 63696 18775
+- **Website:** https://nascraft-digitals.pages.dev
+
+## Core Capabilities
+
+### 1. Software Development
+We engineer bespoke, performant, and secure software systems. Our stack includes React, TypeScript, Tailwind CSS, Node.js, and MongoDB. We reject templates, building clean, scalable custom solutions.
+- **Web Applications:** Custom dashboards, learning platforms, and booking workflows.
+- **Mobile Applications:** Scalable cross-platform and native solutions.
+- **API Systems:** High-performance RESTful APIs and secure integrations.
+
+### 2. Digital Media & Design
+We create premium visual designs and cinematic video productions.
+- **Video Editing:** Professional post-production, motion graphics, and color grading.
+- **Graphic Design:** Branding guidelines, interface mockups, and corporate identity assets.
+- **Photo Retouching:** Product and team image editing for premium web presentation.
+
+### 3. Production Shoots
+We run high-end photography and videography shoots.
+- **Product Photography:** Creative catalog shots and marketing content.
+- **Corporate Profile Shoots:** Promotional videography and corporate storytelling.
+
+## Agency Story & Team
+Nascraft Digitals was established in 2024 (originally founded as CyberMonk Studioz) to focus on digital craftsmanship and high-performance system engineering.
+- **Srihariharan Ganesh Kumar:** Founder & Creative Lead
+- **Aaruhya Kumar:** Co-Founder & Technical Lead
+- **Nishanth Ravikumar:** Co-Founder & Business Strategy Consultant
+
+## Key Website Routes
+- **Home (`/`):** Agency overview, core DNA, featured projects, and client testimonials.
+- **Services (`/services`):** Detailed guide to our Software Development, Digital Media, and Production Shoots capability.
+- **Portfolio (`/portfolio`):** Case studies of active client platforms (e.g. NutriIntern, VarahiAstro Trip Planner, CarRental Pro, BillFlow, SpherePulse).
+- **About (`/about`):** Detailed narrative of our transition from CyberMonk Studioz to Nascraft Digitals, our values (Craftsmanship, Growth, Partnership), and founder bios.
+- **Academy (`/academy`):** Coming soon section highlighting our portfolio-driven learning and training initiatives.
+- **Booking (`/booking`):** Multistep consultation planner and contact system.
+- **Contact (`/contact`):** Interactive inquiry form and hours of operation.

@@ -144,10 +144,7 @@ export default function HeroVisual() {
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="absolute top-4 left-4 md:top-8 md:left-8 w-64 md:w-80 bg-slate-900/90 text-slate-300 rounded-xl border border-slate-800 backdrop-blur-md overflow-hidden text-xs font-mono animate-float-slow"
-          style={{
-            boxShadow: "0 25px 50px -12px rgba(196, 30, 58, 0.15)",
-          }}
+          className="absolute top-4 left-4 md:top-8 md:left-8 w-64 md:w-80 bg-slate-900/90 text-slate-300 rounded-xl border border-slate-800 backdrop-blur-md overflow-hidden text-xs font-mono animate-float-slow shadow-[0_25px_50px_-12px_rgba(196,30,58,0.15)]"
         >
           {/* Header */}
           <div className="flex items-center justify-between px-4 py-2.5 bg-slate-950 border-b border-slate-800">
@@ -199,10 +196,7 @@ export default function HeroVisual() {
           initial={{ y: 40, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="absolute bottom-4 right-4 md:bottom-8 md:right-8 w-60 md:w-72 bg-white/95 rounded-xl border border-slate-100 shadow-2xl p-4 md:p-5 flex flex-col gap-3.5 backdrop-blur-md animate-float-medium"
-          style={{
-            boxShadow: "0 20px 40px -10px rgba(0, 0, 0, 0.08)",
-          }}
+          className="absolute bottom-4 right-4 md:bottom-8 md:right-8 w-60 md:w-72 bg-white/95 rounded-xl border border-slate-100 p-4 md:p-5 flex flex-col gap-3.5 backdrop-blur-md animate-float-medium shadow-[0_20px_40px_-10px_rgba(0,0,0,0.08)]"
         >
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2">

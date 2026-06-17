@@ -10,14 +10,21 @@ import { ArrowRight } from "lucide-react";
  * Design: Grid layout with project cards, hover effects, red accents
  */
 
+import { useSEO } from "@/hooks/useSEO";
+
 export default function Portfolio() {
+  useSEO(
+    "Nascraft Digitals | Case Studies & Creative Work",
+    "Explore our portfolio of high-performance websites, custom web applications, digital designs, and cinematic media campaigns."
+  );
+
   const projects = [
     {
       id: 1,
       title: "NutriIntern",
       category: "Software System",
       description: "NutriIntern is an AI-powered clinical dietetics learning platform that uses real patient cases, interactive activities, and personalized feedback to prepare nutrition students for ward-based practice.",
-      image: "/nutriintern.png",
+      image: "/nutriintern.webp",
       tags: ["React", "TypeScript", "Tailwind", "MongoDB"]
     },
     {
@@ -25,7 +32,7 @@ export default function Portfolio() {
       title: "VarahiAstro Trip Planner",
       category: "Web App",
       description: "VarahiAstro TripPlanner is an AI-powered pilgrimage planning platform that creates personalized temple pariharam travel itineraries, including temple visits, accommodation, food, transportation, and estimated expenses.",
-      image: "/varahiastro.png",
+      image: "/varahiastro.webp",
       tags: ["React", "Framer Motion", "Express API"]
     },
     {
@@ -33,7 +40,7 @@ export default function Portfolio() {
       title: "CarRental Pro",
       category: "Web App",
       description: "CarRental Pro is a smart vehicle booking platform that enables users to rent cars for hourly, daily, and trip-based travel with both self-drive and chauffeur-driven options. From everyday commuting to premium travel experiences, users can seamlessly browse, compare, and book standard, luxury, and high-end vehicles through a streamlined digital experience.",
-      image: "/carrental.png",
+      image: "/carrental.webp",
       tags: ["React", "TypeScript", "Tailwind CSS", "MongoDB"]
     },
     {
@@ -41,7 +48,7 @@ export default function Portfolio() {
       title: "BillFlow",
       category: "Web App",
       description: "BillFlow is a digital billing and invoicing platform designed to simplify business operations through fast and accurate document generation. Users can create, manage, print, and download professional invoices, bills, and cost estimations in PDF format, helping businesses streamline their financial workflows and maintain organized records.",
-      image: "/billflow.png",
+      image: "/billflow.webp",
       tags: ["React", "TypeScript", "Tailwind CSS"]
     },
     {
@@ -49,7 +56,7 @@ export default function Portfolio() {
       title: "SpherePulse",
       category: "Web App",
       description: "SpherePulse is a comprehensive employee and team management platform that simplifies workforce operations through attendance tracking, task assignments, project management, performance analytics, leave management, and real-time team insights. Designed for modern agencies and businesses, it provides leaders with complete visibility into team productivity while helping employees stay organized and accountable.",
-      image: "/spherepulse.png",
+      image: "/spherepulse.webp",
       tags: ["Next", "TypeScript", "Tailwind CSS", "MongoDB"]
     }
   ];
@@ -84,6 +91,7 @@ export default function Portfolio() {
                     src={project.image}
                     alt={project.title}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                    loading="lazy"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </div>

@@ -123,6 +123,9 @@
   .font-playfair {
     font-family: 'Playfair Display', serif;
   }
+  .footer-logo-shadow {
+    text-shadow: 0 1px 4px rgba(255, 255, 255, 0.25);
+  }
   @supports (font-variation-settings: normal) {
     .font-playfair {
       font-variation-settings: 'wght' 600;

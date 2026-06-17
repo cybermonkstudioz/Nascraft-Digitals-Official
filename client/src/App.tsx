@@ -12,6 +12,7 @@ import Contact from "./pages/Contact";
 import Booking from "./pages/Booking";
 import Academy from "./pages/Academy";
 import { useEffect } from "react";
+import { useGoogleAnalytics } from "./hooks/useGoogleAnalytics";
 
 function ScrollToTop() {
   const [pathname] = useLocation();
@@ -66,6 +67,7 @@ function Router() {
 // - If you want to make theme switchable, pass `switchable` ThemeProvider and use `useTheme` hook
 
 function App() {
+  useGoogleAnalytics();
   return (
     <ErrorBoundary>
       <ThemeProvider

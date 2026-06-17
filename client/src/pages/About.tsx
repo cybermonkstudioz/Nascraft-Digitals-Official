@@ -11,7 +11,14 @@ import { motion } from "framer-motion";
  * Design: Narrative-driven with values section and team showcase
  */
 
+import { useSEO } from "@/hooks/useSEO";
+
 export default function About() {
+  useSEO(
+    "Nascraft Digitals | Our Philosophy & Team",
+    "Learn about our agency philosophy of craftsmanship, growth, and partnership. Meet our core team driving digital innovation."
+  );
+
   return (
     <div className="min-h-screen bg-background">
       <Header />
@@ -53,9 +60,10 @@ export default function About() {
             <div className="relative max-w-lg mx-auto w-full lg:max-w-none mt-10 lg:mt-0">
               <div className="absolute -inset-2 bg-gradient-to-tr from-primary/20 to-transparent rounded-2xl blur-lg pointer-events-none opacity-50"></div>
               <img
-                src="/about-our-story.png"
+                src="/about-our-story.webp"
                 alt="Our Story"
                 className="w-full h-[320px] sm:h-[400px] lg:h-[480px] object-cover object-center rounded-xl shadow-2xl border border-border relative z-10"
+                loading="lazy"
               />
             </div>
           </div>
@@ -142,7 +150,7 @@ export default function About() {
                 initials: "SG",
                 name: "Srihariharan Ganesh Kumar",
                 role: "Founder & Creative Lead",
-                image: "/srihariharan.jpg",
+                image: "/srihariharan.webp",
                 objectPosition: "center 28%",
                 zoom: 1.35,
                 bio: "Believes that every brand has a story worth telling. By blending creativity, strategy, and design, he transforms ideas into meaningful digital experiences that inspire trust, spark engagement, and leave a lasting impression on audiences.",
@@ -151,7 +159,7 @@ export default function About() {
                 initials: "AK",
                 name: "Aaruhya Kumar",
                 role: "Co-Founder & Technical Lead",
-                image: "/aaruhya.jpg",
+                image: "/aaruhya.webp",
                 objectPosition: "top center",
                 bio: "Passionate about turning ambitious ideas into powerful digital products. With a focus on innovation, scalability, and user experience, he ensures every solution is built not only to perform flawlessly today but to grow with businesses tomorrow.",
               },
@@ -160,7 +168,7 @@ export default function About() {
                 name: "Nishanth Ravikumar",
                 role: "Co-Founder & Business Strategy Consultant",
                 subRole: "CA Foundation Qualified • Pursuing Chartered Accountancy",
-                image: "/nishanth.jpg",
+                image: "/nishanth.webp",
                 objectPosition: "center 22%",
                 zoom: 1.65,
                 bio: "Driven by the belief that sustainable growth begins with informed decisions. He combines business insight, financial understanding, and strategic thinking to help clients navigate challenges, uncover opportunities, and build a stronger future with confidence.",
@@ -194,6 +202,7 @@ export default function About() {
                         objectPosition: member.objectPosition || "center",
                         transform: member.zoom ? `scale(${member.zoom})` : undefined,
                       }}
+                      loading="lazy"
                     />
                   </div>
                 ) : (

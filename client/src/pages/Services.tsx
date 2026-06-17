@@ -10,7 +10,14 @@ import { ArrowRight, Check, Search, Compass, Cpu, Rocket, ChevronRight } from "l
  * Design: Alternating layout with images and content, red accent highlights
  */
 
+import { useSEO } from "@/hooks/useSEO";
+
 export default function Services() {
+  useSEO(
+    "Nascraft Digitals | Custom Software & Media Services",
+    "Explore our custom digital services including software development, UI/UX design, videography, branding, and high-impact media production."
+  );
+
   return (
     <div className="min-h-screen bg-background">
       <Header />
@@ -35,7 +42,7 @@ export default function Services() {
             <div className="relative max-w-lg mx-auto w-full lg:order-2">
               <div className="absolute -inset-2 bg-gradient-to-tr from-primary/25 to-transparent rounded-2xl blur-lg pointer-events-none opacity-60"></div>
               <img
-                src="/services-software-development.png"
+                src="/services-software-development.webp"
                 alt="Software Development"
                 className="w-full h-[360px] object-cover rounded-xl shadow-2xl border border-white/10 relative z-10"
               />
@@ -103,9 +110,10 @@ export default function Services() {
             <div className="lg:order-2 relative max-w-lg mx-auto w-full">
               <div className="absolute -inset-2 bg-gradient-to-tr from-primary/25 to-transparent rounded-2xl blur-lg pointer-events-none opacity-60"></div>
               <img
-                src="/services-digital-media.png"
+                src="/services-digital-media.webp"
                 alt="Digital Media"
                 className="w-full h-[360px] object-cover rounded-xl shadow-2xl border border-white/10 relative z-10"
+                loading="lazy"
               />
             </div>
 
@@ -171,9 +179,10 @@ export default function Services() {
             <div className="relative max-w-lg mx-auto w-full lg:order-2">
               <div className="absolute -inset-2 bg-gradient-to-tr from-primary/25 to-transparent rounded-2xl blur-lg pointer-events-none opacity-60"></div>
               <img
-                src="/services-production-shoots.png"
+                src="/services-production-shoots.webp"
                 alt="Production Shoots"
                 className="w-full h-[360px] object-cover rounded-xl shadow-2xl border border-white/10 relative z-10"
+                loading="lazy"
               />
             </div>
 

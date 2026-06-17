@@ -14,7 +14,14 @@ import { motion, AnimatePresence } from "framer-motion";
  * Design: Stepper wizard, card selections, spring animations, and native mailto trigger.
  */
 
+import { useSEO } from "@/hooks/useSEO";
+
 export default function Booking() {
+  useSEO(
+    "Nascraft Digitals | Start Your Project With Us",
+    "Have something you've been wanting to build? Share your ideas and book a consultation with our digital product engineering team."
+  );
+
   const [step, setStep] = useState(1);
   const [selectedService, setSelectedService] = useState("Software Development");
   const [selectedTimeline, setSelectedTimeline] = useState("1 - 3 months");

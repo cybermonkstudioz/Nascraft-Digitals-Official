@@ -25,7 +25,7 @@ export default function Footer() {
               </div>
               <p className="text-sm font-semibold">
                 <span className="text-white">Crafting Experiences.</span>{" "}
-                <span className="text-primary" style={{ textShadow: "0 1px 4px rgba(255, 255, 255, 0.25)" }}>Driving Results.</span>
+                <span className="text-primary footer-logo-shadow">Driving Results.</span>
               </p>
             </div>
 
