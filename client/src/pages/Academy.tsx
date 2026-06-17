@@ -33,18 +33,21 @@ export default function Academy() {
       title: "Internship Programs",
       tag: "Hybrid / Remote",
       desc: "Gain agency experience through flexible hybrid and remote programs under the guidance of our team. Build real-world capabilities and work on active portfolios.",
+      actionText: "Curriculum En Route",
     },
     {
       icon: BookOpen,
       title: "Premium Courses",
       tag: "Self-Paced & Cohort",
       desc: "Structured paths covering Frontend Development, UI/UX Design, Cinematic Video Editing, and Business Strategy. Engineered to build modern competencies.",
+      actionText: "Curriculum En Route",
     },
     {
       icon: Calendar,
       title: "Masterclass Workshops",
       tag: "Live Interactive",
       desc: "Immersive, specialized single-day virtual bootcamps covering advanced technologies, creative tools, and workflow systems to rapidly expand your skillset.",
+      actionText: "Agendas Vary by Topic",
     },
   ];
 
@@ -200,7 +203,7 @@ export default function Academy() {
                   </div>
 
                   <div className="pt-8 flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-primary opacity-60 group-hover:opacity-100 transition-opacity">
-                    <span>Curriculum En Route</span>
+                    <span>{program.actionText}</span>
                     <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1.5 transition-transform" />
                   </div>
                 </div>
