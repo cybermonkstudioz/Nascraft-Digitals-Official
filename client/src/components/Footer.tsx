@@ -32,9 +32,9 @@ export default function Footer() {
             {/* MSME Trust Badge */}
             <div className="flex items-center gap-3 bg-white/5 border border-white/10 rounded-lg p-3 max-w-[240px] transition-all duration-300 hover:bg-white/10 hover:border-white/20">
               <img
-                src="https://upload.wikimedia.org/wikipedia/commons/d/d3/MSME_Logo_India.svg"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/MSME_Logo_India.svg/500px-MSME_Logo_India.svg.png"
                 alt="Government of India MSME"
-                className="h-10 w-auto bg-white rounded p-1 flex-shrink-0"
+                className="h-12 w-auto bg-white rounded p-0.5 flex-shrink-0"
               />
               <div className="flex flex-col">
                 <span className="text-[10px] text-primary font-bold uppercase tracking-wider">MSME Certified</span>

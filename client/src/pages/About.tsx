@@ -223,9 +223,9 @@ export default function About() {
           <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12">
             <div className="flex-shrink-0">
               <img
-                src="https://upload.wikimedia.org/wikipedia/commons/d/d3/MSME_Logo_India.svg"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/MSME_Logo_India.svg/500px-MSME_Logo_India.svg.png"
                 alt="MSME India Logo"
-                className="h-20 w-auto bg-white rounded-xl shadow-md p-3.5 border border-border"
+                className="h-24 w-auto bg-white rounded-xl shadow-md p-1.5 border border-border"
               />
             </div>
             <div className="text-left max-w-lg space-y-2">
