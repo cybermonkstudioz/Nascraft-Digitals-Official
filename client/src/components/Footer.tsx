@@ -17,7 +17,7 @@ export default function Footer() {
             <div>
               <div className="flex items-center gap-2 mb-4">
                 <img
-                  src="https://d2xsxph8kpxj0f.cloudfront.net/310519663763520414/JCxr8VHhzxx3kpJMBiaRi6/nas-logo-icon-7AuYjKbupQemu9ZY7VFDfD.png"
+                  src="/favicon.png"
                   alt="Nascraft Digitals"
                   className="w-6 h-6"
                 />

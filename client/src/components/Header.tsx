@@ -20,7 +20,7 @@ export default function Header() {
           <Link href="/">
             <a className="flex items-center gap-3 group" onClick={() => setIsOpen(false)}>
               <img
-                src="https://d2xsxph8kpxj0f.cloudfront.net/310519663763520414/JCxr8VHhzxx3kpJMBiaRi6/nas-logo-icon-K3sNhyrzVyvjoANdkSsvhW.webp"
+                src="/favicon.png"
                 alt="Nascraft Digitals"
                 className="w-8 h-8 transition-transform group-hover:scale-110"
               />
