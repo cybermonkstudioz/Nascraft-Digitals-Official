@@ -217,6 +217,33 @@ export default function About() {
         </div>
       </section>
 
+      {/* Certifications & Trust Section */}
+      <section className="py-16 bg-slate-50 border-y border-border">
+        <div className="container max-w-4xl mx-auto px-4">
+          <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12">
+            <div className="flex-shrink-0">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/d/d3/MSME_Logo_India.svg"
+                alt="MSME India Logo"
+                className="h-20 w-auto bg-white rounded-xl shadow-md p-3.5 border border-border"
+              />
+            </div>
+            <div className="text-left max-w-lg space-y-2">
+              <h3 className="font-playfair text-2xl font-bold text-foreground">
+                Government Certified MSME Agency
+              </h3>
+              <p className="text-secondary leading-relaxed text-sm">
+                Nascraft Digitals is officially registered under the **Ministry of Micro, Small & Medium Enterprises (MSME), Government of India**. This certification validates our credentials, standardizes our business operations, and ensures maximum trust for our clients.
+              </p>
+              <div className="inline-flex items-center gap-1.5 text-xs text-primary font-bold uppercase tracking-wider bg-primary/5 px-3 py-1 rounded-full border border-primary/10">
+                <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+                Udyam Registered
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Designer Red Line Divider */}
       <div className="h-[2px] bg-gradient-to-r from-transparent via-primary to-transparent opacity-65 max-w-4xl mx-auto"></div>
 
