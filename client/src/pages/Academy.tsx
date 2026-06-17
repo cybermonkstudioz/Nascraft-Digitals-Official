@@ -58,14 +58,19 @@ export default function Academy() {
         <div className="absolute inset-0 opacity-[0.03] pointer-events-none bg-[radial-gradient(#C41E3A_1.5px,transparent_1.5px)] [background-size:24px_24px]"></div>
         
         <div className="container max-w-7xl mx-auto px-4 md:px-6 relative z-10 text-center">
-          {/* Accent Badge */}
+          {/* Launching Soon High-Visibility Block */}
           <motion.div 
-            initial={{ opacity: 0, y: -10 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-primary bg-primary/5 px-4 py-1.5 rounded-full border border-primary/10 mb-6"
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            className="inline-flex items-center gap-3.5 bg-gradient-to-r from-primary/10 via-primary/5 to-transparent border-2 border-primary/25 rounded-2xl px-6 py-3.5 mb-8 shadow-[0_10px_35px_rgba(196,30,58,0.08)] backdrop-blur-sm mx-auto"
           >
-            <Sparkles className="w-3.5 h-3.5" />
-            Academy Launching Soon
+            <span className="relative flex h-3 w-3">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-3 w-3 bg-primary"></span>
+            </span>
+            <span className="font-playfair text-lg md:text-xl font-black text-primary tracking-wider uppercase">
+              Academy Launching Soon
+            </span>
           </motion.div>
 
           <motion.h1 
