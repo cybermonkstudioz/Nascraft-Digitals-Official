@@ -218,10 +218,10 @@ export default function Academy() {
         <div className="container max-w-5xl mx-auto px-4 text-center space-y-12">
           <div className="space-y-4 max-w-3xl mx-auto">
             <h2 className="font-playfair text-4xl md:text-5xl font-bold text-primary">
-              Why Certify With Nascraft?
+              Why Invest Your Time With Nascraft?
             </h2>
             <p className="text-white/80 text-lg leading-relaxed">
-              In a crowded job market, proof of competence is key. Our training matches modern production pipelines, and our certified status ensures your effort is valued worldwide.
+              Many people learn. Few gain the experience needed to stand out. Our courses, internships, and workshops are built to help you apply knowledge, work on real-world challenges, strengthen your portfolio, and develop skills that employers actively look for. Because in today's world, what you can do often matters more than what you can claim.
             </p>
           </div>
 
