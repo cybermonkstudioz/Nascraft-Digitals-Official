@@ -85,6 +85,13 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/academy">
+                  <a className="text-white/70 hover:text-primary transition-colors">
+                    Academy
+                  </a>
+                </Link>
+              </li>
+              <li>
                 <Link href="/contact">
                   <a className="text-white/70 hover:text-primary transition-colors">
                     Contact

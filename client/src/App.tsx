@@ -10,6 +10,7 @@ import Portfolio from "./pages/Portfolio";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Booking from "./pages/Booking";
+import Academy from "./pages/Academy";
 import { useEffect } from "react";
 
 function ScrollToTop() {
@@ -51,6 +52,7 @@ function Router() {
       <Route path="/about" component={About} />
       <Route path="/contact" component={Contact} />
       <Route path="/booking" component={Booking} />
+      <Route path="/academy" component={Academy} />
       <Route path="/404" component={NotFound} />
       {/* Final fallback route */}
       <Route component={NotFound} />

@@ -52,6 +52,11 @@ export default function Header() {
                 About
               </a>
             </Link>
+            <Link href="/academy">
+              <a className="text-sm font-medium text-foreground hover:text-primary transition-colors">
+                Academy
+              </a>
+            </Link>
           </nav>
 
           {/* Actions */}
@@ -110,6 +115,14 @@ export default function Header() {
                 className="text-sm font-medium text-foreground hover:text-primary transition-colors py-2 border-b border-slate-100"
               >
                 About
+              </a>
+            </Link>
+            <Link href="/academy">
+              <a
+                onClick={() => setIsOpen(false)}
+                className="text-sm font-medium text-foreground hover:text-primary transition-colors py-2 border-b border-slate-100"
+              >
+                Academy
               </a>
             </Link>
             <Link href="/booking">
