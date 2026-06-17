@@ -142,12 +142,14 @@ export default function About() {
                 initials: "SG",
                 name: "Srihariharan Ganesh Kumar",
                 role: "Founder & Creative Lead",
+                image: "/srihariharan.jpg",
                 bio: "Believes that every brand has a story worth telling. By blending creativity, strategy, and design, he transforms ideas into meaningful digital experiences that inspire trust, spark engagement, and leave a lasting impression on audiences.",
               },
               {
                 initials: "AK",
                 name: "Aaruhya Kumar",
                 role: "Co-Founder & Technical Lead",
+                image: "/aaruhya.jpg",
                 bio: "Passionate about turning ambitious ideas into powerful digital products. With a focus on innovation, scalability, and user experience, he ensures every solution is built not only to perform flawlessly today but to grow with businesses tomorrow.",
               },
               {
@@ -155,6 +157,7 @@ export default function About() {
                 name: "Nishanth Ravikumar",
                 role: "Co-Founder & Business Strategy Consultant",
                 subRole: "CA Foundation Qualified • Pursuing Chartered Accountancy",
+                image: "/nishanth.jpg",
                 bio: "Driven by the belief that sustainable growth begins with informed decisions. He combines business insight, financial understanding, and strategic thinking to help clients navigate challenges, uncover opportunities, and build a stronger future with confidence.",
               },
             ].map((member, idx) => (
@@ -176,11 +179,21 @@ export default function About() {
                 }}
                 className="text-center group p-6 rounded-2xl bg-white/[0.02] border border-white/5 transition-all duration-300 cursor-pointer"
               >
-                <div className="w-24 h-24 rounded-full bg-primary/10 border border-primary/20 mx-auto mb-6 flex items-center justify-center group-hover:scale-105 group-hover:bg-primary/20 group-hover:border-primary/40 transition-all duration-300">
-                  <div className="text-3xl font-bold text-primary tracking-wider font-playfair">
-                    {member.initials}
+                {member.image ? (
+                  <div className="w-24 h-24 rounded-full border border-white/10 mx-auto mb-6 overflow-hidden group-hover:scale-105 group-hover:border-primary/45 transition-all duration-300 shadow-md">
+                    <img 
+                      src={member.image} 
+                      alt={member.name}
+                      className="w-full h-full object-cover object-center"
+                    />
                   </div>
-                </div>
+                ) : (
+                  <div className="w-24 h-24 rounded-full bg-primary/10 border border-primary/20 mx-auto mb-6 flex items-center justify-center group-hover:scale-105 group-hover:bg-primary/20 group-hover:border-primary/40 transition-all duration-300">
+                    <div className="text-3xl font-bold text-primary tracking-wider font-playfair">
+                      {member.initials}
+                    </div>
+                  </div>
+                )}
                 <h3 className="font-semibold text-xl mb-1.5 text-white group-hover:text-primary transition-colors duration-300">{member.name}</h3>
                 <p className="text-primary font-semibold text-sm mb-1">{member.role}</p>
                 {member.subRole && (
