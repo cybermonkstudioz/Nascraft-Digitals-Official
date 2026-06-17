@@ -30,9 +30,9 @@ export default function Academy() {
   const programs = [
     {
       icon: Briefcase,
-      title: "Industry Internships",
-      tag: "Hands-on Experience",
-      desc: "Work on live agency client projects under the mentorship of senior engineers, digital marketers, and directors. Gain real-world capabilities that stand out on any resume.",
+      title: "Internship Programs",
+      tag: "Hybrid / Remote",
+      desc: "Gain agency experience through flexible hybrid and remote programs under the guidance of our team. Build real-world capabilities and work on active portfolios.",
     },
     {
       icon: BookOpen,
