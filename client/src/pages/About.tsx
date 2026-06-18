@@ -160,7 +160,8 @@ export default function About() {
                 name: "Aaruhya Kumar",
                 role: "Co-Founder & Technical Lead",
                 image: "/aaruhya.webp",
-                objectPosition: "top center",
+                objectPosition: "center 22%",
+                zoom: 1.05,
                 bio: "Passionate about turning ambitious ideas into powerful digital products. With a focus on innovation, scalability, and user experience, he ensures every solution is built not only to perform flawlessly today but to grow with businesses tomorrow.",
               },
               {
@@ -168,9 +169,10 @@ export default function About() {
                 name: "Nishanth Ravikumar",
                 role: "Co-Founder & Business Strategy Consultant",
                 subRole: "CA Foundation Qualified • Pursuing Chartered Accountancy",
-                image: "/nishanth.webp",
-                objectPosition: "center 22%",
-                zoom: 1.65,
+                image: "/nishanth.jpg",
+                style: {
+                  transform: "scale(2.4) translate(-6%, 20%)",
+                },
                 bio: "Driven by the belief that sustainable growth begins with informed decisions. He combines business insight, financial understanding, and strategic thinking to help clients navigate challenges, uncover opportunities, and build a stronger future with confidence.",
               },
             ].map((member, idx) => (
@@ -198,7 +200,7 @@ export default function About() {
                       src={member.image} 
                       alt={member.name}
                       className="w-full h-full object-cover"
-                      style={{
+                      style={member.style || {
                         objectPosition: member.objectPosition || "center",
                         transform: member.zoom ? `scale(${member.zoom})` : undefined,
                       }}
