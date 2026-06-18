@@ -170,9 +170,8 @@ export default function About() {
                 role: "Co-Founder & Business Strategy Consultant",
                 subRole: "CA Foundation Qualified • Pursuing Chartered Accountancy",
                 image: "/nishanth.jpg",
-                style: {
-                  transform: "scale(2.4) translate(-6%, 20%)",
-                },
+                objectPosition: "center 22%",
+                zoom: 1.15,
                 bio: "Driven by the belief that sustainable growth begins with informed decisions. He combines business insight, financial understanding, and strategic thinking to help clients navigate challenges, uncover opportunities, and build a stronger future with confidence.",
               },
             ].map((member, idx) => (
@@ -200,7 +199,7 @@ export default function About() {
                       src={member.image} 
                       alt={member.name}
                       className="w-full h-full object-cover"
-                      style={member.style || {
+                      style={{
                         objectPosition: member.objectPosition || "center",
                         transform: member.zoom ? `scale(${member.zoom})` : undefined,
                       }}
