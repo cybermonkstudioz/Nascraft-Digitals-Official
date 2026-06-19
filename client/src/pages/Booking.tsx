@@ -122,8 +122,10 @@ export default function Booking() {
       <Header />
 
       {/* Page Header */}
-      <section className="pt-16 pb-10 md:pt-20 md:pb-12 bg-white border-b border-border">
-        <div className="container max-w-7xl mx-auto px-4 md:px-6 text-center">
+      <section className="relative pt-16 pb-10 md:pt-20 md:pb-12 bg-white border-b border-border overflow-hidden">
+        {/* Background Watermark Dragon Logo */}
+        <div className="dragon-bg"></div>
+        <div className="container max-w-7xl mx-auto px-4 md:px-6 text-center relative z-10">
           <h1 className="font-playfair text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight max-w-4xl mx-auto">
             Have Something You've Been Wanting to Build?
           </h1>

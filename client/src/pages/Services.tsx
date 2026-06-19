@@ -23,8 +23,10 @@ export default function Services() {
       <Header />
 
       {/* Page Header */}
-      <section className="pt-16 pb-10 md:pt-20 md:pb-12 bg-white border-b border-border">
-        <div className="container max-w-7xl mx-auto px-4 md:px-6 text-center">
+      <section className="relative pt-16 pb-10 md:pt-20 md:pb-12 bg-white border-b border-border overflow-hidden">
+        {/* Background Watermark Dragon Logo */}
+        <div className="dragon-bg"></div>
+        <div className="container max-w-7xl mx-auto px-4 md:px-6 text-center relative z-10">
           <h1 className="font-playfair text-5xl md:text-6xl font-bold text-foreground mb-4">
             Our Services
           </h1>
@@ -87,14 +89,12 @@ export default function Services() {
                 </div>
               </div>
 
-              <Link href="/contact">
-                <a>
-                  <Button className="bg-primary hover:bg-primary/90 text-white font-semibold px-8 py-3 h-auto flex items-center gap-2 transition-all duration-200 hover:shadow-lg active:scale-95">
-                    Let's Build Your Product
-                    <ArrowRight className="w-4 h-4" />
-                  </Button>
-                </a>
-              </Link>
+              <Button asChild className="bg-primary hover:bg-primary/90 text-white font-semibold px-8 py-3 h-auto flex items-center gap-2 transition-all duration-200 hover:shadow-lg active:scale-95">
+                <Link href="/contact">
+                  Let's Build Your Product
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+              </Button>
             </div>
           </div>
         </div>
@@ -155,14 +155,12 @@ export default function Services() {
                 </div>
               </div>
 
-              <Link href="/contact">
-                <a>
-                  <Button className="bg-primary hover:bg-primary/90 text-white font-semibold px-8 py-3 h-auto flex items-center gap-2 transition-all duration-200 hover:shadow-lg active:scale-95">
-                    Elevate Your Brand
-                    <ArrowRight className="w-4 h-4" />
-                  </Button>
-                </a>
-              </Link>
+              <Button asChild className="bg-primary hover:bg-primary/90 text-white font-semibold px-8 py-3 h-auto flex items-center gap-2 transition-all duration-200 hover:shadow-lg active:scale-95">
+                <Link href="/contact">
+                  Elevate Your Brand
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+              </Button>
             </div>
           </div>
         </div>
@@ -225,14 +223,12 @@ export default function Services() {
                 </div>
               </div>
 
-              <Link href="/contact">
-                <a>
-                  <Button className="bg-primary hover:bg-primary/90 text-white font-semibold px-8 py-3 h-auto flex items-center gap-2 transition-all duration-200 hover:shadow-lg active:scale-95">
-                    Bring Your Story to Screen
-                    <ArrowRight className="w-4 h-4" />
-                  </Button>
-                </a>
-              </Link>
+              <Button asChild className="bg-primary hover:bg-primary/90 text-white font-semibold px-8 py-3 h-auto flex items-center gap-2 transition-all duration-200 hover:shadow-lg active:scale-95">
+                <Link href="/contact">
+                  Bring Your Story to Screen
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+              </Button>
             </div>
           </div>
         </div>
@@ -329,14 +325,12 @@ export default function Services() {
           <p className="text-lg text-secondary max-w-2xl mx-auto mb-8">
             Whether you're launching a product, growing your brand, or telling your story through visuals, we're here to help turn your vision into something meaningful, impactful, and built to last.
           </p>
-          <Link href="/contact">
-            <a>
-              <Button className="bg-primary hover:bg-primary/90 text-white font-semibold px-8 py-3 h-auto flex items-center gap-2 mx-auto transition-all duration-200 hover:shadow-lg active:scale-95">
-                Schedule a Consultation
-                <ArrowRight className="w-4 h-4" />
-              </Button>
-            </a>
-          </Link>
+          <Button asChild className="bg-primary hover:bg-primary/90 text-white font-semibold px-8 py-3 h-auto inline-flex items-center gap-2 mx-auto transition-all duration-200 hover:shadow-lg active:scale-95">
+            <Link href="/contact">
+              Schedule a Consultation
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+          </Button>
         </div>
       </section>
 

@@ -2,7 +2,7 @@ import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { ArrowRight, Users, Target, Zap } from "lucide-react";
+import { ArrowRight, Users, Target, Zap, Utensils, Lightbulb, TrendingUp } from "lucide-react";
 import { motion } from "framer-motion";
 
 /**
@@ -24,8 +24,10 @@ export default function About() {
       <Header />
 
       {/* Page Header */}
-      <section className="pt-16 pb-10 md:pt-20 md:pb-12 bg-white border-b border-border">
-        <div className="container max-w-7xl mx-auto px-4 md:px-6 text-center">
+      <section className="relative pt-16 pb-10 md:pt-20 md:pb-12 bg-white border-b border-border overflow-hidden">
+        {/* Background Watermark Dragon Logo */}
+        <div className="dragon-bg"></div>
+        <div className="container max-w-7xl mx-auto px-4 md:px-6 text-center relative z-10">
           <h1 className="font-playfair text-5xl md:text-6xl font-bold text-foreground mb-4">
             About Nascraft Digitals
           </h1>
@@ -67,6 +69,195 @@ export default function About() {
               />
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Red Accent Line */}
+      <div className="h-1 bg-gradient-to-r from-primary via-primary to-transparent"></div>
+
+      {/* Why Nascraft Exists Section */}
+      <section className="py-20 md:py-32 bg-slate-50">
+        <div className="container max-w-7xl mx-auto px-4 md:px-6">
+          <div className="text-center mb-16">
+            <h2 className="font-playfair text-4xl md:text-5xl font-bold text-foreground mb-4">
+              Why Nascraft Exists?
+            </h2>
+            <div className="w-16 h-1 bg-primary mx-auto mb-8"></div>
+            <p className="text-2xl font-playfair font-medium text-primary max-w-3xl mx-auto leading-relaxed">
+              We've seen great businesses go unnoticed.
+            </p>
+            <p className="text-lg text-primary max-w-2xl mx-auto mt-4 leading-relaxed font-medium">
+              Not because their products were bad, and not because their services weren't good enough. But because the way they were presented didn't reflect the value they truly offered.
+            </p>
+          </div>
+
+          {/* Three Examples Grid */}
+          <motion.div 
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-50px" }}
+            variants={{
+              hidden: {},
+              visible: {
+                transition: {
+                  staggerChildren: 0.1
+                }
+              }
+            }}
+            className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16"
+          >
+            {[
+              {
+                icon: <Utensils className="exists-icon w-6 h-6 text-primary group-hover:text-white transition-colors duration-300" />,
+                text: "A restaurant serving incredible food with poor online visibility."
+              },
+              {
+                icon: <Lightbulb className="exists-icon w-6 h-6 text-primary group-hover:text-white transition-colors duration-300" />,
+                text: "A startup with a powerful idea but no digital presence."
+              },
+              {
+                icon: <TrendingUp className="exists-icon w-6 h-6 text-primary group-hover:text-white transition-colors duration-300" />,
+                text: "A business owner working tirelessly every day while potential customers scroll past without noticing."
+              }
+            ].map((item, idx) => (
+              <motion.div
+                key={idx}
+                variants={{
+                  hidden: { opacity: 0, y: 30 },
+                  visible: { 
+                    opacity: 1, 
+                    y: 0,
+                    transition: { type: "spring", stiffness: 80, damping: 15 }
+                  }
+                }}
+                whileHover={{ 
+                  y: -10,
+                  scale: 1.025,
+                  boxShadow: "0 20px 40px -15px rgba(196,30,58,0.15)",
+                  borderColor: "rgba(196,30,58,0.3)"
+                }}
+                whileTap={{
+                  scale: 0.98,
+                  y: -2,
+                  boxShadow: "0 10px 20px -10px rgba(196,30,58,0.1)"
+                }}
+                className="exists-card group bg-white p-8 rounded-2xl border border-border shadow-sm transition-all duration-300 cursor-pointer"
+              >
+                <div className="exists-icon-container w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary group-hover:scale-110 transition-all duration-300">
+                  {item.icon}
+                </div>
+                <p className="text-lg text-foreground font-medium leading-relaxed">
+                  {item.text}
+                </p>
+              </motion.div>
+            ))}
+          </motion.div>
+
+          {/* The Realization / Insight */}
+          <motion.div 
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            animate={{
+              y: [0, -8, 0]
+            }}
+            transition={{
+              y: {
+                repeat: Infinity,
+                duration: 5,
+                ease: "easeInOut"
+              },
+              opacity: { duration: 0.5 },
+              scale: { duration: 0.5 }
+            }}
+            whileHover={{ 
+              scale: 1.025,
+              boxShadow: "0 25px 50px -12px rgba(196,30,58,0.18)",
+              borderColor: "rgba(196,30,58,0.35)",
+              transition: { duration: 0.3 }
+            }}
+            whileTap={{
+              scale: 0.98
+            }}
+            className="realization-card bg-gradient-to-br from-primary/5 to-primary/10 border border-primary/20 p-8 md:p-12 rounded-3xl max-w-4xl mx-auto text-center mb-20 shadow-inner cursor-pointer"
+          >
+            <p className="text-xs font-bold uppercase tracking-widest text-primary mb-4">The Realization</p>
+            <blockquote className="font-playfair text-2xl md:text-3xl font-bold text-foreground leading-relaxed">
+              "People can't trust what they don't understand. And they can't choose what they never notice."
+            </blockquote>
+          </motion.div>
+
+          {/* Why We Built & What We Do */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-5xl mx-auto mb-20">
+            <motion.div 
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+              className="space-y-6"
+            >
+              <h3 className="font-playfair text-3xl md:text-4xl font-bold text-foreground">
+                That's why we built Nascraft Digitals.
+              </h3>
+              <p className="text-lg text-secondary leading-relaxed">
+                We believe that excellence in business should be matched by excellence in digital presentation. We exist to close the gap between how good you are and how good you look.
+              </p>
+            </motion.div>
+            <motion.div 
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+              className="bg-white p-8 rounded-2xl border border-border shadow-sm space-y-6"
+            >
+              <div className="space-y-4">
+                <div className="flex items-center gap-3 text-foreground">
+                  <div className="w-2 h-2 rounded-full bg-primary"></div>
+                  <span className="font-medium">Not just to design websites.</span>
+                </div>
+                <div className="flex items-center gap-3 text-foreground">
+                  <div className="w-2 h-2 rounded-full bg-primary"></div>
+                  <span className="font-medium">Not just to create brands.</span>
+                </div>
+                <div className="flex items-center gap-3 text-foreground">
+                  <div className="w-2 h-2 rounded-full bg-primary"></div>
+                  <span className="font-medium">Not just to produce content.</span>
+                </div>
+              </div>
+              <div className="pt-6 border-t border-border">
+                <p className="text-lg font-bold text-primary leading-relaxed">
+                  But to help businesses present themselves with the same quality, passion, and professionalism they put into their work every single day.
+                </p>
+              </div>
+            </motion.div>
+          </div>
+
+          {/* Competitor / Present Better Quote */}
+          <motion.div 
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center max-w-3xl mx-auto py-10 border-y border-border mb-16"
+          >
+            <p className="text-xs font-bold uppercase tracking-widest text-primary mb-3">Our Core Philosophy</p>
+            <blockquote className="font-playfair text-3xl md:text-5xl font-bold text-foreground leading-normal italic">
+              "Because your competitors aren't always better. <span className="text-primary">Sometimes, they're just presented better.</span>"
+            </blockquote>
+          </motion.div>
+
+          {/* Final Call to Action / Belief */}
+          <motion.div 
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.2, duration: 0.5 }}
+            className="text-center max-w-2xl mx-auto"
+          >
+            <p className="text-xl md:text-2xl font-medium text-foreground leading-relaxed font-playfair">
+              And we believe every great business deserves the chance to be <span className="underline decoration-primary decoration-2 underline-offset-4 font-bold">seen</span>, <span className="underline decoration-primary decoration-2 underline-offset-4 font-bold">trusted</span>, and <span className="underline decoration-primary decoration-2 underline-offset-4 font-bold">remembered</span>.
+            </p>
+          </motion.div>
         </div>
       </section>
 
@@ -191,6 +382,10 @@ export default function About() {
                   boxShadow: "0 20px 40px -15px rgba(196,30,58,0.25)",
                   borderColor: "rgba(196,30,58,0.4)"
                 }}
+                whileTap={{
+                  scale: 0.98,
+                  y: -4
+                }}
                 className="text-center group p-6 rounded-2xl bg-white/[0.02] border border-white/5 transition-all duration-300 cursor-pointer"
               >
                 {member.image ? (
@@ -228,7 +423,7 @@ export default function About() {
       {/* Stats Section */}
       <section className="pt-20 pb-16 md:pt-32 md:pb-24 bg-white">
         <div className="container max-w-7xl mx-auto px-4 md:px-6">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-x-4 gap-y-10 md:gap-8 text-center">
             <div>
               <div className="text-5xl font-bold text-primary mb-2">20+</div>
               <p className="text-secondary font-semibold">Projects Completed</p>
@@ -288,14 +483,12 @@ export default function About() {
           <p className="text-lg text-secondary max-w-3xl mx-auto mb-8 leading-relaxed">
             Tell us what you're building, what challenge you're solving, or what future you're envisioning. Together, we'll craft something that creates real value and lasting impact.
           </p>
-          <Link href="/contact">
-            <a>
-              <Button className="bg-primary hover:bg-primary/90 text-white font-semibold px-8 py-3.5 h-auto flex items-center gap-2 mx-auto transition-all duration-200 hover:shadow-lg active:scale-95">
-                Let's Connect
-                <ArrowRight className="w-4 h-4" />
-              </Button>
-            </a>
-          </Link>
+          <Button asChild className="bg-primary hover:bg-primary/90 text-white font-semibold px-8 py-3.5 h-auto inline-flex items-center gap-2 mx-auto transition-all duration-200 hover:shadow-lg active:scale-95">
+            <Link href="/contact">
+              Let's Connect
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+          </Button>
         </div>
       </section>
 

@@ -1,4 +1,5 @@
 import { Link } from "wouter";
+import { Instagram, MessageCircle } from "lucide-react";
 
 /**
  * Footer Component
@@ -91,31 +92,23 @@ export default function Footer() {
             <h4 className="font-semibold mb-4 text-white">Company</h4>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="/about">
-                  <a className="text-white/70 hover:text-primary transition-colors">
-                    About Us
-                  </a>
+                <Link href="/about" className="text-white/70 hover:text-primary transition-colors">
+                  About Us
                 </Link>
               </li>
               <li>
-                <Link href="/portfolio">
-                  <a className="text-white/70 hover:text-primary transition-colors">
-                    Portfolio
-                  </a>
+                <Link href="/portfolio" className="text-white/70 hover:text-primary transition-colors">
+                  Portfolio
                 </Link>
               </li>
               <li>
-                <Link href="/academy">
-                  <a className="text-white/70 hover:text-primary transition-colors">
-                    Academy
-                  </a>
+                <Link href="/academy" className="text-white/70 hover:text-primary transition-colors">
+                  Academy
                 </Link>
               </li>
               <li>
-                <Link href="/contact">
-                  <a className="text-white/70 hover:text-primary transition-colors">
-                    Contact
-                  </a>
+                <Link href="/contact" className="text-white/70 hover:text-primary transition-colors">
+                  Contact
                 </Link>
               </li>
             </ul>
@@ -125,8 +118,28 @@ export default function Footer() {
           <div>
             <h4 className="font-semibold mb-4 text-white">Contact</h4>
             <ul className="space-y-2 text-sm text-white/70">
-              <li>Email: contatcnas@gmail.com</li>
-              <li>Phone: +91 6369618775</li>
+              <li>Email: <a href="mailto:contatcnas@gmail.com" className="hover:text-primary transition-colors">contatcnas@gmail.com</a></li>
+              <li>Phone: <a href="tel:+916369618775" className="hover:text-primary transition-colors">+91 6369618775</a></li>
+              <li className="pt-3 flex items-center gap-3">
+                <a 
+                  href="https://www.instagram.com/nascraftdigitals_/" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="w-8 h-8 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-primary hover:border-primary hover:text-white transition-all duration-300"
+                  aria-label="Instagram"
+                >
+                  <Instagram className="w-4 h-4" />
+                </a>
+                <a 
+                  href="https://wa.me/916369618775" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="w-8 h-8 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-primary hover:border-primary hover:text-white transition-all duration-300"
+                  aria-label="WhatsApp"
+                >
+                  <MessageCircle className="w-4 h-4" />
+                </a>
+              </li>
             </ul>
           </div>
         </div>

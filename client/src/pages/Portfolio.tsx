@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { ArrowRight } from "lucide-react";
+import { motion } from "framer-motion";
 
 /**
  * Portfolio Page
@@ -66,8 +67,10 @@ export default function Portfolio() {
       <Header />
 
       {/* Page Header */}
-      <section className="pt-16 pb-10 md:pt-20 md:pb-12 bg-white border-b border-border">
-        <div className="container max-w-7xl mx-auto px-4 md:px-6 text-center">
+      <section className="relative pt-16 pb-10 md:pt-20 md:pb-12 bg-white border-b border-border overflow-hidden">
+        {/* Background Watermark Dragon Logo */}
+        <div className="dragon-bg"></div>
+        <div className="container max-w-7xl mx-auto px-4 md:px-6 text-center relative z-10">
           <h1 className="font-playfair text-5xl md:text-6xl font-bold text-foreground mb-4">
             Our Portfolio
           </h1>
@@ -80,17 +83,45 @@ export default function Portfolio() {
       {/* Portfolio Grid */}
       <section className="pt-12 pb-20 md:pt-16 md:pb-32 bg-white">
         <div className="container max-w-7xl mx-auto px-4 md:px-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <motion.div 
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-50px" }}
+            variants={{
+              hidden: {},
+              visible: {
+                transition: {
+                  staggerChildren: 0.1
+                }
+              }
+            }}
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          >
             {projects.map((project) => (
-              <div
+              <motion.div
                 key={project.id}
-                className="group bg-card rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-border hover:border-primary/30 flex flex-col h-full"
+                variants={{
+                  hidden: { opacity: 0, y: 30 },
+                  visible: { 
+                    opacity: 1, 
+                    y: 0,
+                    transition: { type: "spring", stiffness: 80, damping: 15 }
+                  }
+                }}
+                whileHover={{ 
+                  y: -10,
+                  scale: 1.015,
+                  boxShadow: "0 20px 45px -15px rgba(196,30,58,0.18)",
+                  borderColor: "rgba(196,30,58,0.3)"
+                }}
+                whileTap={{ scale: 0.98 }}
+                className="hover-card group bg-card rounded-xl overflow-hidden border border-border transition-all duration-300 flex flex-col h-full cursor-pointer"
               >
                 <div className="relative h-48 overflow-hidden bg-muted flex-shrink-0">
                   <img
                     src={project.image}
                     alt={project.title}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     loading="lazy"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -101,7 +132,7 @@ export default function Portfolio() {
                     <span className="inline-block text-xs font-semibold text-primary bg-primary/10 px-3 py-1 rounded-full">
                       {project.category}
                     </span>
-                    <h3 className="font-playfair text-xl font-bold text-foreground">
+                    <h3 className="font-playfair text-xl font-bold text-foreground group-hover:text-primary transition-colors duration-300">
                       {project.title}
                     </h3>
                     <p className="text-secondary text-sm leading-relaxed line-clamp-4">
@@ -121,15 +152,15 @@ export default function Portfolio() {
                       </div>
                     )}
 
-                    <div className="flex items-center text-primary font-semibold text-sm group-hover:gap-2 transition-all cursor-pointer">
+                    <div className="flex items-center text-primary font-semibold text-sm cursor-pointer">
                       View Case Study
-                      <ArrowRight className="w-4 h-4 ml-1" />
+                      <ArrowRight className="w-4 h-4 ml-1.5 group-hover:translate-x-1.5 transition-transform duration-300" />
                     </div>
                   </div>
                 </div>
-              </div>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
         </div>
       </section>
 
@@ -142,14 +173,12 @@ export default function Portfolio() {
           <p className="text-lg text-white/80 max-w-3xl mx-auto mb-8 leading-relaxed">
             Every project begins with a vision. Together, let's transform yours into an experience that creates value, builds trust, and leaves a lasting impact.
           </p>
-          <Link href="/contact">
-            <a>
-              <Button className="bg-primary hover:bg-primary/90 text-white font-semibold px-8 py-3.5 h-auto flex items-center gap-2 mx-auto transition-all duration-200 hover:shadow-lg active:scale-95">
-                Let's Build It Together
-                <ArrowRight className="w-4 h-4" />
-              </Button>
-            </a>
-          </Link>
+          <Button asChild className="bg-primary hover:bg-primary/90 text-white font-semibold px-8 py-3.5 h-auto inline-flex items-center gap-2 mx-auto transition-all duration-200 hover:shadow-lg active:scale-95">
+            <Link href="/contact">
+              Let's Build It Together
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+          </Button>
         </div>
       </section>
 

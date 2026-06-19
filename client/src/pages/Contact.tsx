@@ -5,7 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { Mail, Phone, Clock, ArrowRight, MapPin } from "lucide-react";
+import { Mail, Phone, Clock, ArrowRight, MapPin, MessageCircle, Instagram } from "lucide-react";
 import { toast } from "sonner";
 import { motion } from "framer-motion";
 
@@ -75,18 +75,18 @@ export default function Contact() {
       <Header />
 
       {/* Page Header */}
-      <section className="pt-16 pb-10 md:pt-20 md:pb-12 bg-white border-b border-border">
-        <div className="container max-w-7xl mx-auto px-4 md:px-6 text-center">
+      <section className="relative pt-16 pb-10 md:pt-20 md:pb-12 bg-white border-b border-border overflow-hidden">
+        {/* Background Watermark Dragon Logo */}
+        <div className="dragon-bg"></div>
+        <div className="container max-w-7xl mx-auto px-4 md:px-6 text-center relative z-10">
           <h1 className="font-playfair text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-4">
             Have an Idea That Keeps You Thinking?
           </h1>
           <p className="text-lg text-primary font-medium max-w-3xl mx-auto mb-6">
             Every meaningful product, brand, and story begins with a vision. If there's something you've been wanting to build, grow, or bring to life, we'd love to be part of the journey.
           </p>
-          <Link href="/booking">
-            <a className="inline-flex items-center gap-2 text-primary hover:text-primary/80 font-bold transition-all duration-200 group active:scale-95 text-base">
-              → Let's Build It Together
-            </a>
+          <Link href="/booking" className="inline-flex items-center gap-2 text-primary hover:text-primary/80 font-bold transition-all duration-200 group active:scale-95 text-base">
+            → Let's Build It Together
           </Link>
         </div>
       </section>
@@ -136,6 +136,7 @@ export default function Contact() {
               <motion.a 
                 href="tel:+916369618775"
                 whileHover={{ y: -4 }}
+                whileTap={{ scale: 0.98 }}
                 className="group block p-6 rounded-xl bg-card border border-border/80 hover:border-primary/40 hover:shadow-[0_12px_30px_-12px_rgba(196,30,58,0.18)] transition-all duration-300"
               >
                 <div className="flex items-start gap-4">
@@ -147,6 +148,52 @@ export default function Contact() {
                     <p className="text-secondary text-base font-medium">+91 6369618775</p>
                     <span className="inline-flex items-center text-xs text-primary font-bold group-hover:gap-1.5 transition-all pt-1">
                       Call our team <ArrowRight className="w-3 h-3 ml-1" />
+                    </span>
+                  </div>
+                </div>
+              </motion.a>
+
+              {/* WhatsApp Card */}
+              <motion.a 
+                href="https://wa.me/916369618775"
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ y: -4 }}
+                whileTap={{ scale: 0.98 }}
+                className="group block p-6 rounded-xl bg-card border border-border/80 hover:border-emerald-500/40 hover:shadow-[0_12px_30px_-12px_rgba(16,185,129,0.18)] transition-all duration-300"
+              >
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 rounded-lg bg-emerald-500/10 flex items-center justify-center text-emerald-600 group-hover:bg-emerald-500 group-hover:text-white group-hover:scale-105 transition-all duration-300 flex-shrink-0">
+                    <MessageCircle className="w-6 h-6" />
+                  </div>
+                  <div className="space-y-1">
+                    <h4 className="font-bold text-foreground group-hover:text-emerald-600 transition-colors text-sm uppercase tracking-wider">WhatsApp</h4>
+                    <p className="text-secondary text-base font-medium">+91 6369618775</p>
+                    <span className="inline-flex items-center text-xs text-emerald-600 font-bold group-hover:gap-1.5 transition-all pt-1">
+                      Chat on WhatsApp <ArrowRight className="w-3 h-3 ml-1" />
+                    </span>
+                  </div>
+                </div>
+              </motion.a>
+
+              {/* Instagram Card */}
+              <motion.a 
+                href="https://www.instagram.com/nascraftdigitals_/"
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ y: -4 }}
+                whileTap={{ scale: 0.98 }}
+                className="group block p-6 rounded-xl bg-card border border-border/80 hover:border-pink-500/40 hover:shadow-[0_12px_30px_-12px_rgba(236,72,153,0.18)] transition-all duration-300"
+              >
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 rounded-lg bg-pink-500/10 flex items-center justify-center text-pink-600 group-hover:bg-pink-500 group-hover:text-white group-hover:scale-105 transition-all duration-300 flex-shrink-0">
+                    <Instagram className="w-6 h-6" />
+                  </div>
+                  <div className="space-y-1">
+                    <h4 className="font-bold text-foreground group-hover:text-pink-600 transition-colors text-sm uppercase tracking-wider">Instagram</h4>
+                    <p className="text-secondary text-base font-medium">@nascraftdigitals_</p>
+                    <span className="inline-flex items-center text-xs text-pink-600 font-bold group-hover:gap-1.5 transition-all pt-1">
+                      Follow our page <ArrowRight className="w-3 h-3 ml-1" />
                     </span>
                   </div>
                 </div>

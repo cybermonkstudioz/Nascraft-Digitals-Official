@@ -67,6 +67,9 @@ export default function Academy() {
         {/* Abstract Background Design Grid */}
         <div className="absolute inset-0 opacity-[0.03] pointer-events-none bg-[radial-gradient(#C41E3A_1.5px,transparent_1.5px)] [background-size:24px_24px]"></div>
         
+        {/* Background Watermark Dragon Logo */}
+        <div className="dragon-bg"></div>
+        
         <div className="container max-w-7xl mx-auto px-4 md:px-6 relative z-10 text-center">
           {/* Launching Soon High-Visibility Block */}
           <motion.div 

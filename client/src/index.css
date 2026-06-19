@@ -189,56 +189,103 @@
 
 /* Mobile - DNA, Hover, and Testimonial Cards always show enhanced styles on small screens */
 @media (max-width: 768px) {
-  .dna-card {
-    transform: translateY(-2px) !important;
-    border-color: rgba(196, 30, 58, 0.35) !important;
-    box-shadow: 0 8px 30px -10px rgba(196, 30, 58, 0.18) !important;
-  }
+  @media (hover: none) {
+    .dna-card {
+      transform: translateY(-2px) !important;
+      border-color: rgba(196, 30, 58, 0.35) !important;
+      box-shadow: 0 8px 30px -10px rgba(196, 30, 58, 0.18) !important;
+    }
 
-  .dna-card-icon {
-    background-color: var(--primary) !important;
-    color: var(--primary-foreground) !important;
-    transform: scale(1.05) !important;
-  }
+    .dna-card-icon {
+      background-color: var(--primary) !important;
+      color: var(--primary-foreground) !important;
+      transform: scale(1.05) !important;
+    }
 
-  .dna-card-title {
-    color: var(--primary) !important;
-  }
+    .dna-card-title {
+      color: var(--primary) !important;
+    }
 
-  .hover-card {
-    transform: translateY(-4px) !important;
-    border-color: rgba(196, 30, 58, 0.35) !important;
-    box-shadow: 0 12px 40px -12px rgba(196, 30, 58, 0.2) !important;
-  }
+    .hover-card {
+      transform: translateY(-4px) !important;
+      border-color: rgba(196, 30, 58, 0.35) !important;
+      box-shadow: 0 12px 40px -12px rgba(196, 30, 58, 0.2) !important;
+    }
 
-  .hover-card-title {
-    color: var(--primary) !important;
-  }
+    .hover-card-title {
+      color: var(--primary) !important;
+    }
 
-  .hover-card img {
-    transform: scale(1.03) !important;
-  }
+    .hover-card img {
+      transform: scale(1.03) !important;
+    }
 
-  .testimonial-card {
-    transform: translateY(-2px) !important;
-    border-color: rgba(196, 30, 58, 0.3) !important;
-    box-shadow: 0 10px 30px -10px rgba(196, 30, 58, 0.18) !important;
-  }
+    .testimonial-card {
+      transform: translateY(-2px) !important;
+      border-color: rgba(196, 30, 58, 0.3) !important;
+      box-shadow: 0 10px 30px -10px rgba(196, 30, 58, 0.18) !important;
+    }
 
-  .testimonial-card .text-primary {
-    transform: scale(1.05) !important;
-    opacity: 0.9 !important;
-  }
+    .testimonial-card .text-primary {
+      transform: scale(1.05) !important;
+      opacity: 0.9 !important;
+    }
 
-  .testimonial-card .testimonial-avatar {
-    transform: scale(1.05) !important;
-    background-color: rgba(196, 30, 58, 0.3) !important;
-    border-color: rgba(196, 30, 58, 0.6) !important;
-  }
+    .testimonial-card .testimonial-avatar {
+      transform: scale(1.05) !important;
+      background-color: rgba(196, 30, 58, 0.3) !important;
+      border-color: rgba(196, 30, 58, 0.6) !important;
+    }
 
-  .testimonial-card .testimonial-author {
-    color: var(--primary) !important;
+    .testimonial-card .testimonial-author {
+      color: var(--primary) !important;
+    }
+
+    .exists-card {
+      transform: translateY(-4px) !important;
+      border-color: rgba(196, 30, 58, 0.35) !important;
+      box-shadow: 0 12px 30px -10px rgba(196, 30, 58, 0.15) !important;
+    }
+
+    .exists-card .exists-icon-container {
+      background-color: var(--primary) !important;
+      transform: scale(1.1) !important;
+    }
+
+    .exists-card .exists-icon {
+      color: var(--primary-foreground) !important;
+    }
+
+    .realization-card {
+      border-color: rgba(196, 30, 58, 0.3) !important;
+      box-shadow: 0 15px 35px -10px rgba(196, 30, 58, 0.15) !important;
+    }
   }
+}
+
+@keyframes dragon-float-centered {
+  0%, 100% { transform: translate(-50%, -50%) translateY(0) scale(1); }
+  50% { transform: translate(-50%, -50%) translateY(-12px) scale(1.02); }
+}
+
+.dragon-bg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 350px;
+  height: 350px;
+  max-width: 90vw;
+  max-height: 90%;
+  z-index: 0;
+  user-select: none;
+  pointer-events: none;
+  background-image: url('/dragon-logo.webp');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.22;
+  animation: dragon-float-centered 6s ease-in-out infinite;
 }
 
 

@@ -56,16 +56,6 @@ export default function Home() {
 
       {/* Hero Section */}
       <section className="relative py-20 md:py-32 overflow-hidden">
-        {/* Background Watermark Dragon Logo */}
-        <div
-          className="absolute inset-0 z-0 select-none pointer-events-none animate-[dragon-float_6s_ease-in-out_infinite] bg-[url('/dragon-logo.webp')] bg-contain bg-no-repeat bg-center opacity-10"
-        ></div>
-        <style>{`
-          @keyframes dragon-float {
-            0%, 100% { transform: translateY(0) scale(1); }
-            50% { transform: translateY(-15px) scale(1.03); }
-          }
-        `}</style>
 
         {/* Ambient background glow */}
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl pointer-events-none"></div>
@@ -99,24 +89,21 @@ export default function Home() {
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4">
-                <Link href="/services">
-                  <a>
-                    <Button className="bg-primary hover:bg-primary/90 text-white font-semibold px-8 py-3.5 h-auto flex items-center gap-2 transition-all duration-200 hover:shadow-[0_10px_20px_-10px_rgba(196,30,58,0.5)] active:scale-95">
-                      Discover What We Build
-                      <ArrowRight className="w-4 h-4" />
-                    </Button>
-                  </a>
-                </Link>
-                <Link href="/contact">
-                  <a>
-                    <Button
-                      variant="outline"
-                      className="border-2 border-primary text-primary hover:bg-primary/5 font-semibold px-8 py-3.5 h-auto transition-all duration-200 active:scale-95"
-                    >
-                      Ready to Bring It to Life?
-                    </Button>
-                  </a>
-                </Link>
+                <Button asChild className="bg-primary hover:bg-primary/90 text-white font-semibold px-8 py-3.5 h-auto flex items-center gap-2 transition-all duration-200 hover:shadow-[0_10px_20px_-10px_rgba(196,30,58,0.5)] active:scale-95">
+                  <Link href="/services">
+                    Discover What We Build
+                    <ArrowRight className="w-4 h-4" />
+                  </Link>
+                </Button>
+                <Button
+                  asChild
+                  variant="outline"
+                  className="border-2 border-primary text-primary hover:bg-primary/5 font-semibold px-8 py-3.5 h-auto transition-all duration-200 active:scale-95"
+                >
+                  <Link href="/contact">
+                    Ready to Bring It to Life?
+                  </Link>
+                </Button>
               </div>
 
               {/* Stats Grid */}
@@ -165,11 +152,9 @@ export default function Home() {
                 At Nascraft Digitals, we reject template-based cookie-cutter solutions. We construct custom architectures designed to scale, optimized for performance, and aligned with aesthetic excellence.
               </p>
               <div className="pt-2">
-                <Link href="/about">
-                  <a className="inline-flex items-center text-primary font-bold text-sm hover:gap-2 transition-all">
-                    Learn about our philosophy
-                    <ArrowRight className="w-4 h-4 ml-1.5" />
-                  </a>
+                <Link href="/about" className="inline-flex items-center text-primary font-bold text-sm hover:gap-2 transition-all">
+                  Learn about our philosophy
+                  <ArrowRight className="w-4 h-4 ml-1.5" />
                 </Link>
               </div>
             </div>
@@ -279,10 +264,8 @@ export default function Home() {
                     High-performance web applications, server APIs, cloud platforms, and custom software systems designed to run seamlessly.
                   </p>
                 </div>
-                <Link href="/services">
-                  <a className="inline-flex items-center text-primary font-semibold text-sm group-hover:gap-1.5 transition-all pt-4">
-                    Learn More <ArrowRight className="w-4 h-4 ml-1" />
-                  </a>
+                <Link href="/services" className="inline-flex items-center text-primary font-semibold text-sm group-hover:gap-1.5 transition-all pt-4">
+                  Learn More <ArrowRight className="w-4 h-4 ml-1" />
                 </Link>
               </div>
             </div>
@@ -308,10 +291,8 @@ export default function Home() {
                     Stunning graphic design, interface mockups, cinematic video edits, and branding materials to set you apart.
                   </p>
                 </div>
-                <Link href="/services">
-                  <a className="inline-flex items-center text-primary font-semibold text-sm group-hover:gap-1.5 transition-all pt-4">
-                    Learn More <ArrowRight className="w-4 h-4 ml-1" />
-                  </a>
+                <Link href="/services" className="inline-flex items-center text-primary font-semibold text-sm group-hover:gap-1.5 transition-all pt-4">
+                  Learn More <ArrowRight className="w-4 h-4 ml-1" />
                 </Link>
               </div>
             </div>
@@ -337,10 +318,8 @@ export default function Home() {
                     Professional, high-end photography, cinematic video shoots, corporate profiles, and media production sets.
                   </p>
                 </div>
-                <Link href="/services">
-                  <a className="inline-flex items-center text-primary font-semibold text-sm group-hover:gap-1.5 transition-all pt-4">
-                    Learn More <ArrowRight className="w-4 h-4 ml-1" />
-                  </a>
+                <Link href="/services" className="inline-flex items-center text-primary font-semibold text-sm group-hover:gap-1.5 transition-all pt-4">
+                  Learn More <ArrowRight className="w-4 h-4 ml-1" />
                 </Link>
               </div>
             </div>
@@ -362,14 +341,12 @@ export default function Home() {
               </p>
             </div>
             <div className="mt-6 md:mt-0">
-              <Link href="/portfolio">
-                <a>
-                  <Button variant="outline" className="border-2 border-primary text-primary hover:bg-primary hover:text-white transition-all font-semibold flex items-center gap-2 py-3 px-6 h-auto">
-                    View Portfolio
-                    <ExternalLink className="w-4 h-4" />
-                  </Button>
-                </a>
-              </Link>
+              <Button asChild variant="outline" className="border-2 border-primary text-primary hover:bg-primary hover:text-white transition-all font-semibold flex items-center gap-2 py-3 px-6 h-auto">
+                <Link href="/portfolio">
+                  View Portfolio
+                  <ExternalLink className="w-4 h-4" />
+                </Link>
+              </Button>
             </div>
           </div>
 
@@ -570,14 +547,12 @@ export default function Home() {
             If you have an idea that keeps you thinking, let's work together to turn it into something real, valuable, and lasting.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
-            <Link href="/contact">
-              <a>
-                <Button className="bg-primary hover:bg-primary/90 text-white font-semibold px-8 py-3.5 h-auto flex items-center gap-2 mx-auto transition-all duration-200 hover:shadow-lg active:scale-95">
-                  Let's Build It Together
-                  <ArrowRight className="w-4 h-4" />
-                </Button>
-              </a>
-            </Link>
+            <Button asChild className="bg-primary hover:bg-primary/90 text-white font-semibold px-8 py-3.5 h-auto inline-flex items-center gap-2 mx-auto transition-all duration-200 hover:shadow-lg active:scale-95">
+              <Link href="/contact">
+                Let's Build It Together
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+            </Button>
           </div>
         </div>
       </section>
